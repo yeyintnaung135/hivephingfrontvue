@@ -1,0 +1,395 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100%;
+    height: auto;
+    font-family: Raleway;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: #00baff;
+    font-size: 20px;
+    transition: .5s ease;
+}
+
+a:hover {
+    color: #00baff;
+}
+
+.form {
+    /*background: rgba(19, 35, 47, 0.9);*/
+    background: rgb(50, 45, 142);
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.tab-group li a:hover {
+    background: #ffab0078;
+    color: #ffffff;
+}
+
+.tab-group .active a {
+    background: #c18b1c;
+    color: #ffffff;
+}
+
+.tab-content > div:last-child {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+label {
+    position: absolute;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    left: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+label .req {
+    margin: 2px;
+    color: #00baff;
+}
+
+label.active {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+#textarea.active {
+    -webkit-transform: translateX(-70px);
+    transform: translateX(-70px);
+    left: 2px;
+    font-size: 14px;
+}
+
+label.active .req {
+    opacity: 0;
+}
+
+label.highlight {
+    color: #ffffff;
+}
+
+input, textarea {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 6px;
+    font-size: 22px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 7px 10px;
+}
+
+input:focus, textarea:focus {
+    outline: 0;
+    border-color: #00baff;
+}
+
+textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.top-row > div:last-child {
+    margin: 0;
+}
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 7px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #00baff;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    border-radius: 6px;
+}
+
+.button:hover, .button:focus {
+    background: #00baff;
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.background {
+    background: url('../photo/background/005.jpg') no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.welcome-bg {
+    background: url('../photo/background/welcome_bg.jpg') no-repeat;
+    background-size: cover;
+
+    width: 100%;
+
+}
+
+#title {
+    font-size: 37px;
+    float: left;
+    padding-top: 70px;
+    color: #000;
+    font-weight: 800;
+}
+
+div #login_letter {
+    font-size: 20px;
+    color: #000;
+    padding: 15px 100px;
+    text-align: justify;
+}
+
+.poor {
+    padding: 60px;
+    text-align: justify;
+    font-size: 20px;
+    color: #fff;
+    background-image: url("../images/work-bg.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    margin: 90px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    padding: 100px 0px 60px 0px;
+}
+
+.poor h1 {
+    font-weight: bold;
+    color: #f7b633;
+}
+
+.poor p {
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.poor:before {
+    content: "";
+    background: #2025485c;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#footer {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#footer li {
+    float: left;
+    list-style-type: none;
+    font-size: 40px;
+}
+
+#footer a {
+    color: #00baff;
+    padding: 20px;
+}
+
+.tab-group .tab-title a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #00baff;
+    font-size: 20px;
+    float: left;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.title {
+    font-size: 20px;
+    color: #00baff;
+    text-align: center;
+    padding: 30px 60px;
+}
+
+.add_form {
+    background: rgba(82, 50, 211, 0.56);
+    padding: 40px;
+    /*max-width: 600px;*/
+    margin: 40px auto;
+    border-radius: 4px;
+    /*box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
+}
+
+.field-wrap label {
+    color: white;
+}
+
+.field-wrap h3 {
+    color: white;
+}
+
+.field-wrap input, textarea, select {
+    padding: 10px 11px;
+    font-size: 18px;
+    /*color: #000;*/
+    border-color: white;
+}
+
+.detail_h {
+    font-size: 22px;
+    color: #606c71;
+    text-align: left;
+    font-weight: 600;
+}
+
+.other-h {
+    font-size: 35px;
+    color: #00589c;
+    font-weight: 800;
+    text-align: left;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px #00589c;
+}
+
+#detail {
+    font-size: 18px;
+    color: #00589c;
+}
+
+.f-detail {
+    padding: 30px 0px;
+}
+
+.tab-title a {
+    border: 1px solid #00baff;
+}
+
+@media (max-width: 1000px) {
+    #footer {
+        height: 340px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+    }
+
+}
+@media (max-width: 900px) {
+    #footer {
+        height: 390px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+    }
+
+}
+
+@media (max-width: 1168px) {
+    .tab-group .tab-title a {
+        font-size: 12px !important;
+    }
+}
+.btn-info{
+    background-color:#FFAB00 !important;
+    border: #FFAB00 !important;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active{
+    background: #FFAB00 !important;
+    border-color: #FFAB00 !important;
+}
