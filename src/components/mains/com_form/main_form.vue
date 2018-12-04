@@ -285,14 +285,14 @@
             var ss = this;
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_states?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_states?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.states = _.orderBy(response.data.states, ['mm_name'], ['asc']);
                 console.log('states');
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_cities/' + 2537 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_cities/' + 2537 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.cities = _.orderBy(response.data.cities, ['myan_name'], ['asc']);
                 ss.city = ss.cities[0].id;
@@ -300,49 +300,49 @@
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 1 + '/' + 2 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 1 + '/' + 2 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log(ss.data_works);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 1 + '/' + 3 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 1 + '/' + 3 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_roof = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log(ss.data_works_roof);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 1 + '/' + 4 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 1 + '/' + 4 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_wall = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log(ss.data_works_wall);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 2 + '/' +7 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 2 + '/' +7 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_dnw = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log(ss.data_works_dnw);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 2 + '/' + 8 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 2 + '/' + 8 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_nfloor = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log(ss.data_works_nfloor);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 2 + '/' + 9 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 2 + '/' + 9 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_cfloor = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log('ccccc' + ss.data_works_cfloor);
             });
             axios({
                 method: 'get',
-                url: 'http://www.hivephing.com/constructback/api/get_work/' + 4 + '/' + 16 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/public/api/get_work/' + 4 + '/' + 16 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.data_works_paint = _.orderBy(response.data.data, ['name'], ['asc']);
                 console.log('ccccc' + ss.data_works_paint);
@@ -368,7 +368,7 @@
                 const self = this;
                 return axios({
                     method: 'get',
-                    url: 'http://www.hivephing.com/constructback/api/get_cities/' + id + '?token=' + localStorage.getItem('token'),
+                    url: 'http://www.hivephing.com/constructback/public/api/get_cities/' + id + '?token=' + localStorage.getItem('token'),
                 }).then(function (response) {
                     self.cities = _.orderBy(response.data.cities, ['name'], ['asc']);
                     self.city = self.cities[0].id;
@@ -400,9 +400,9 @@
 //                console.log(self.file1);
 //
                 //if you send  data as formData you will use axios.post
-                return axios.post('http://www.hivephing.com/constructback/api/dashboard/addfr', formData
+                return axios.post('http://www.hivephing.com/constructback/public/api/dashboard/addfr', formData
 //                    method: 'post',
-//                    url: 'http://www.hivephing.com/constructback/api/dashboard/addfr',
+//                    url: 'http://www.hivephing.com/constructback/public/api/dashboard/addfr',
 //                    data: {
 //////                        name: self.name,
 //////                        phone: self.phone,

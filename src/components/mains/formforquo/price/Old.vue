@@ -465,7 +465,7 @@
                 localStorage.setItem('class', self.paint_class)
                 return axios({
                     method: 'post',
-                    url: 'http://localhost/constructback/api/test2',
+                    url: 'http://www.hivephing.com/constructback/api/test2',
                     data: {
                         paint_class: self.paint_class,
                         cleaning: self.cleaning,
@@ -550,7 +550,7 @@
 
             axios({
                 method: 'get',
-                url: 'http://localhost/constructback/api/get_states?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/api/get_states?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.states = _.orderBy(response.data.states, ['mm_name'], ['asc']);
                 console.log('states');

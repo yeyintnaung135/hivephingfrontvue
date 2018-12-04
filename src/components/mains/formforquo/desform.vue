@@ -292,7 +292,7 @@
             var ss = this;
             axios({
                 method: 'get',
-                url: 'http://localhost/constructback/api/get_states?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/api/get_states?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.states = _.orderBy(response.data.states, ['mm_name'], ['asc']);
                 console.log('states');
@@ -300,7 +300,7 @@
             });
             axios({
                 method: 'get',
-                url: 'http://localhost/constructback/api/get_cities/' + 2537 + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/api/get_cities/' + 2537 + '?token=' + localStorage.getItem('token'),
             }).then(function (response) {
                 ss.cities = _.orderBy(response.data.cities, ['myan_name'], ['asc']);
                 ss.city = ss.cities[0].id;
@@ -330,7 +330,7 @@
                 const self = this;
                 return axios({
                     method: 'get',
-                    url: 'http://localhost/constructback/api/get_cities/' + id + '?token=' + localStorage.getItem('token'),
+                    url: 'http://www.hivephing.com/constructback/api/get_cities/' + id + '?token=' + localStorage.getItem('token'),
                 }).then(function (response) {
                     self.cities = _.orderBy(response.data.cities, ['name'], ['asc']);
                     self.city = self.cities[0].id;
@@ -361,9 +361,9 @@
 //                console.log(self.file1);
 //
                 //if you send  data as formData you will use axios.post
-                return axios.post('http://localhost/constructback/api/dashboard/addfr', formData
+                return axios.post('http://www.hivephing.com/constructback/api/dashboard/addfr', formData
 //                    method: 'post',
-//                    url: 'http://localhost/constructback/api/dashboard/addfr',
+//                    url: 'http://www.hivephing.com/constructback/api/dashboard/addfr',
 //                    data: {
 //////                        name: self.name,
 //////                        phone: self.phone,

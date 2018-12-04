@@ -14,20 +14,20 @@
                             </li>
                             <li class="m-nav__separator">-</li>
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/proposals/all" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/proposals/all" class="m-nav__link">
                                     <span class="m-nav__link-text">Proposals</span>
                                 </a>
                             </li>
                             <li class="m-nav__separator">-</li>
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/formq/all" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/formq/all" class="m-nav__link">
                                     <span class="m-nav__link-text"> {{$lang.main.proposals.upload_proposals}}</span>
                                 </a>
                             </li>
                             <li class="m-nav__separator">-</li>
 
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/contact/mastery" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/contact/mastery" class="m-nav__link">
                                     <span class="m-nav__link-text">{{$lang.main.proposals.contact}}</span>
                                 </a>
                             </li>
@@ -374,7 +374,7 @@
                 var self = this;
                 return axios({
                     method: 'post',
-                    url: 'http://localhost/constructback/api/dashboard/confirm_project',
+                    url: 'http://www.hivephing.com/constructback/api/dashboard/confirm_project',
                     data:{
                         token:localStorage.getItem('token'),
                         user_id:con_id,
@@ -398,7 +398,7 @@
                 self.coro='';
                 return axios({
                     method: 'post',
-                    url: 'http://localhost/constructback/api/dashboard/proposals/close_project',
+                    url: 'http://www.hivephing.com/constructback/api/dashboard/proposals/close_project',
                     data:{
                         token:localStorage.getItem('token'),
                         id:close_id,
@@ -420,7 +420,7 @@
                 self.per_close='';
                 return axios({
                     method: 'post',
-                    url: 'http://localhost/constructback/api/dashboard/proposals/open_project',
+                    url: 'http://www.hivephing.com/constructback/api/dashboard/proposals/open_project',
                     data:{
                         token:localStorage.getItem('token'),
                         id:close_id,
@@ -466,7 +466,7 @@
             var self = this;
             return axios({
                 method: 'get',
-                url: 'http://localhost/constructback/api/dashboard/proposals/detail/' + this.$route.params.fr + '?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/api/dashboard/proposals/detail/' + this.$route.params.fr + '?token=' + localStorage.getItem('token'),
                 headers: {
                     'Content-type': 'application/json'
                 }

@@ -82,6 +82,16 @@
 
         },
         created() {
+            axios({
+                method: 'get',
+                url: 'http://www.hivephing.com/constructback/api/get_token/'+this.$route.params.user_id,
+
+            }).then(function (response) {
+               localStorage.setItem('token',response.data.token);
+               console.log(localStorage.getItem('token'));
+            });
+
+
             this.crnode('dist/js/vendors.bundle.js');
             this.crnode('dist/js/scripts.bundle.js');
             this.crnode('dist/js/tools.js');

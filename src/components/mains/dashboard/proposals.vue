@@ -14,20 +14,20 @@
                             </li>
                             <li class="m-nav__separator">-</li>
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/proposals/all" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/proposals/all" class="m-nav__link">
                                     <span class="m-nav__link-text">Proposals</span>
                                 </a>
                             </li>
                             <li class="m-nav__separator">-</li>
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/formq/all" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/formq/all" class="m-nav__link">
                                     <span class="m-nav__link-text"> {{$lang.main.proposals.upload_proposals}}</span>
                                 </a>
                             </li>
                             <li class="m-nav__separator">-</li>
 
                             <li class="m-nav__item">
-                                <a href="http://localhost/dashboard/contact/mastery" class="m-nav__link">
+                                <a href="http://www.hivephing.com/dashboard/contact/mastery" class="m-nav__link">
                                     <span class="m-nav__link-text">{{$lang.main.proposals.contact}}</span>
                                 </a>
                             </li>
@@ -321,16 +321,16 @@
             },
             download: function (dwn_file) {
 
-                var url = window.URL.createObjectURL(new Blob(['http://localhost/constructback/public/user_attachments/'+dwn_file]));
+                var url = window.URL.createObjectURL(new Blob(['http://www.hivephing.com/constructback/public/user_attachments/'+dwn_file]));
                 console.log(dwn_file);
                 var link = document.createElement('a');
-                link.href ='http://localhost/constructback/public/user_attachments/'+dwn_file;
+                link.href ='http://www.hivephing.com/constructback/public/user_attachments/'+dwn_file;
                 link.setAttribute('download', dwn_file); //or any other extension
                 document.body.appendChild(link);
                 link.click();
                 console.log(url);
 //                axios({
-//                    url: 'http://localhost/constructback/api/rr/'+dwn_file,
+//                    url: 'http://www.hivephing.com/constructback/api/rr/'+dwn_file,
 //                    method: 'GET',
 //                    responseType: 'blob', // important
 //                }).then((response) => {
@@ -353,7 +353,7 @@
                 var self = this;
                 return axios({
                     method: 'get',
-                    url: "http://localhost/constructback/api/dashboard/" + type + "/proposals?token=" + localStorage.getItem('token'),
+                    url: "http://www.hivephing.com/constructback/api/dashboard/" + type + "/proposals?token=" + localStorage.getItem('token'),
                     headers: {
                         'Content-type': 'application/json'
                     }
@@ -377,7 +377,7 @@
             var self = this;
             return axios({
                 method: 'get',
-                url: 'http://localhost/constructback/api/dashboard/fr/proposals?token=' + localStorage.getItem('token'),
+                url: 'http://www.hivephing.com/constructback/api/dashboard/fr/proposals?token=' + localStorage.getItem('token'),
                 headers: {
                     'Content-type': 'application/json'
                 }
