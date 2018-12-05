@@ -65,7 +65,7 @@
 
                             <div class="f-detail">
                                 <div class="col-md-2">
-                                    <img :src="'http://www.hivephing.com/companies/users/entro/photo/'+com_data.logo"
+                                    <img :src="'http://www.hivephing.com/companies/public/users/entro/photo/'+com_data.logo"
                                          class="img-circle" alt="Logo Image" width="100" height="100">
                                 </div>
                                 <div class="col-md-10" style="word-wrap:break-word;">
@@ -174,7 +174,7 @@ Aluminium လုပ္ငန္း</span>
                                 </div>
                                 <div class="m-portlet__body" >
                                     <div class="col-sm-4" style="float:left;height: 166px;">
-                                        <img v-bind:src="'http://www.hivephing.com/companies/users/entro/photo/portfolio/'+data.photo" width="152" style=" vertical-align: text-top;float:left;margin:9px;">
+                                        <img v-bind:src="'http://www.hivephing.com/companies/public/users/entro/photo/portfolio/'+data.photo" width="152" style=" vertical-align: text-top;float:left;margin:9px;">
                                     </div>
 
                                     <div style="word-wrap: break-word;height:189px;">
